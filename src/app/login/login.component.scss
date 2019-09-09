@@ -1,0 +1,55 @@
+.mainImg
+{
+    height: 90vh;
+}
+
+.mainContainer
+{
+    padding: 0;
+    font-family: 'Roboto Slab';
+}
+
+.formPart
+{
+    height: 100vh;
+    font-size: 1vW;
+
+}
+
+.emailLabel , .passwordLabel 
+{
+    font-size: 0.90vW;
+    font-weight: 600;
+  
+    font-family: 'Roboto Slab';
+
+}
+
+.loginHead
+{
+    height: 2vW;
+}
+
+.loginHeadParent
+{
+    background:white !important;
+    margin-bottom: 3vW;
+}
+
+.frgtPass, .rememMe
+{
+    font-size: 0.86vW;
+    font-family: 'Varela Round';
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.signInBtn
+{
+  background: #003ca1 !important;
+  font-family: 'Varela Round' !important;
+  font-weight: 600;
+  border-color: #003ca1 !important;
+  color: white !important;
+}
+/*font-family: 'Google Sans',Roboto,Arial,sans-serif*/
