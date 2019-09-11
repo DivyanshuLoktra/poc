@@ -1,0 +1,135 @@
+.mainNavbar
+{ 
+   background-color: #244093 !important;
+   padding: 0 !important;
+   padding-left: 1vW !important;
+   margin-bottom: 0 !important;
+   
+}
+.logoImg
+{
+    padding-left: 0.5vW;
+}
+
+.logoImg , .logoImg2
+{
+    height: 2vW;
+}
+
+.dropdownItems
+{
+    font-size: 0.9vW;
+    font-family: 'Varela Round';
+}
+
+.collapseBtn
+{
+    color: white !important;
+}
+
+
+
+.parentContainer
+{
+    height: 100vh;
+    padding: 0;
+}
+
+.mainContainer
+{
+    height: 92.6vh;
+    width: 100%;
+    margin: 0;
+}
+
+.sideBar
+{
+    background: #244093;
+    height: -webkit-fill-available;
+    transition: 1s;
+    width:100%;
+    transition-timing-function: ease-out;
+    overflow:auto;
+    padding: 0;
+}
+
+
+
+.mainBar
+{
+    height: -webkit-fill-available;
+    background:lightgrey;
+}
+
+.ulClassMain
+{
+    text-decoration: none;
+    font-size: 10px;
+    font-family: 'Varela Round';
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    list-style-type: none;
+    margin-top: 1vW;
+    margin-top: 1vW;
+    padding: 0;
+    margin-right: 0;
+}
+
+.liClass
+{
+    padding-left: 1vW;
+    margin-bottom: 7px;
+    cursor: pointer;
+    
+}
+
+
+
+@media only screen and (max-width: 720px) {
+    .logoImg , .logoImg2
+{
+    height: 5vW;
+}
+
+.mainContainer
+{
+    width: 100%;
+}
+  
+}
+
+  @media only screen and (max-width: 1200px) {
+    .mainContainer
+    {
+       height: 90.6vh;
+      max-width: 100%;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    .mainContainer
+    {
+       height: 92.6vh;
+      max-width: 100%;
+    }
+  }
+  
+  
+  
+
+
+
+
+
+ .nothing
+ {
+    
+     width:0%;
+ }
+.noDisplay
+{
+    display: none;
+}
+
+

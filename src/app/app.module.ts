@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { MaincompComponent } from './maincomp/maincomp.component';
 import { Routes, RouterModule } from '@angular/router';
+import {FormsModule} from '@angular/forms';
+import {AuthService} from './auth.service';
 
 const appRoutes: Routes = [
   {
@@ -19,6 +21,7 @@ const appRoutes: Routes = [
   
   {
     path:'main',
+    //canActivate:[AuthService],
     component:MaincompComponent
   }
 ]
@@ -33,6 +36,7 @@ const appRoutes: Routes = [
     BrowserModule,
     MDBBootstrapModule.forRoot(),
     RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
