@@ -18,7 +18,7 @@
         <li class="nav-item avatar dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
-            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0 logoImg2"
+            <img src="../../assets/Au_logo.png" class="rounded-circle z-depth-0 logoImg2"
               alt="avatar image">
           </a>
           <div class="dropdown-menu dropdownItems dropdown-menu-lg-right dropdown-secondary"
@@ -34,7 +34,7 @@
   </nav>
 
   <div class="container mainContainer">
-      <div class="row">
+      <div class="row mainRow">
           <div class= {{sideBarClass}}>
               <ul class={{ulClass}}>
                     <li class="liClass"><a href="#" style="color:white;">Dashboard</a></li>
@@ -57,7 +57,36 @@
           </div>
 
           <div class={{mainClass}}>
-              <mat-card>Simple card</mat-card>
+              <div class="navModule">
+                <div class='moduleName'>
+                  <div class="moduleHeading">
+                    Tasks
+                  </div>
+                  <div class="moduleCount">
+                    Total: 103
+                  </div>
+                </div>
+                <div class="actionBtn">
+                    <button mat-button [matMenuTriggerFor]="menu">Actions</button>
+                    <mat-menu #menu="matMenu">
+                      <button class="innerMenu" (click)="openDialog()" mat-menu-item>Add Task</button>
+                      <button class="innerMenu" mat-menu-item>Bulk Upload</button>
+                      <button class="innerMenu" mat-menu-item>Bulk Download</button>
+                    </mat-menu>
+                </div>
+
+              </div>
+              <div class="dataPart"> 
+                <div class={{filterClass}}>
+                  <app-filter></app-filter>
+                </div>
+                <div class={{tableClass}}>
+                    
+                  <mat-slide-toggle class='toggleBtn' [(ngModel)]="isChecked" (change)="onToggleFilter($event)" ></mat-slide-toggle>
+                  <app-partner></app-partner>
+                </div>
+
+              </div>
                 
             </div>
 
@@ -69,3 +98,5 @@
   
    
 </div>
+
+

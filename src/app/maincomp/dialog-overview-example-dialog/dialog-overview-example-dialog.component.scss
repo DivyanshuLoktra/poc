@@ -1,0 +1,63 @@
+.modalContainer
+{
+    height: 450px;
+}
+
+.taskTypeChoose
+{
+    font-size: 12px;
+    font-family: 'Varela Round';
+    font-weight: 500;
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.selectorDiv
+{
+    flex: 1;
+}
+
+.btnDiv
+{
+    flex: 3;
+}
+.taskTypeOptions
+{
+    font-size: 12px;
+    font-family: 'Varela Round';
+    font-weight: 500;
+}
+
+.formMainContainer
+{
+    min-height: 400px;
+    overflow: auto;
+}
+
+.submitBtn
+{
+    font-size: 10px;  
+    text-transform: uppercase;
+    line-height: 0;
+    height: 26px;
+    background-color: #244093;
+}
+
+.noDisplay
+{
+    display: none;
+}
+
+.filterEntity
+{
+    font-size: 12px;
+    font-family: 'Varela Round';
+}
+
+mat-form-field
+{
+    font-family: 'Varela Round';
+    font-weight: 500 !important;
+}

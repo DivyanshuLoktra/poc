@@ -1,0 +1,64 @@
+
+<div class="container modalContainer">
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" class="taskTypeChoose">
+   
+<mat-form-field class="selectorDiv">
+  <mat-label> Choose Task Type</mat-label>
+  <mat-select>
+    <mat-option class="taskTypeOptions" *ngFor="let t of taskType" [value]="t.value" (click)="selectTaskType(t)">
+      {{t.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<div class= {{selectBtnClass}}>
+        <button mat-flat-button class="submitBtn" color="primary">Submit</button>
+</div>
+
+</div>
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 formContainer">
+ <mat-card class="formMainContainer">
+     <div class="container">
+         <div class="row">
+            <div class="col-lg-6 col-md-6 col-dm-6 col-xs-6" *ngFor="let item of formTask">
+                    
+                    <div *ngIf="item.widget == 'textWidget'" class="filterEntity">
+                         <mat-form-field class="example-full-width">
+                                <input matInput placeholder="{{item.label}}">
+                        </mat-form-field>
+                    </div>
+                    <div *ngIf="item.widget == 'numberWidget'"  class="filterEntity">
+                        {{item.label}}
+                    </div>
+                    <div *ngIf="item.widget == 'gpsWidget'"  class="filterEntity">
+                        {{item.label}}
+                    </div>
+                    <div *ngIf="item.widget == 'selectWidget'"  class="filterEntity">
+                            <mat-form-field>
+                                    <mat-label>{{item.label}}</mat-label>
+                                    <mat-select>
+                                      <mat-option *ngFor="let t of item.data" [value]="t.value">
+                                        {{t.viewValue}}
+                                      </mat-option>
+                                    </mat-select>
+                            </mat-form-field>
+                    </div>
+                    <div *ngIf="item.widget == 'dateWidget'"  class="filterEntity">
+                            <mat-form-field>
+                                    <input matInput [matDatepicker]="picker" placeholder="{{item.label}}">
+                                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker></mat-datepicker>
+                                  </mat-form-field>
+                    </div>
+                        
+            </div>
+         </div>
+     </div>
+ </mat-card>
+</div>
+    
+
+</div>
+
+</div>

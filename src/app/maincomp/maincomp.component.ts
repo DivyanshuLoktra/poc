@@ -1,4 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Inject} from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {DialogOverviewExampleDialogComponent} from './dialog-overview-example-dialog/dialog-overview-example-dialog.component';
+
+
+export interface DialogData {
+  animal: string;
+  name: string;
+}
+
+
 
 @Component({
   selector: 'app-maincomp',
@@ -6,11 +16,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./maincomp.component.scss']
 })
 export class MaincompComponent implements OnInit {
+  animal: string;
+  name: string;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
   sideBarClass = 'nothing';
   mainClass='col-lg-12 col-md-12 col-sm-12 col-xs-12 mainBar'
   ulClass='noDisplay';
+
+  filterClass='noDisplay';
+  tableClass='tablePart';
+  isChecked:boolean=false;
+
+  
 
   ngOnInit() {
    
@@ -33,6 +51,38 @@ export class MaincompComponent implements OnInit {
     }
   }
 
+  //Function to handle the toggle of filter
+  onToggleFilter(e)
+  {
+
+    console.log("Value of Checked in", this.isChecked);
+    if(!this.isChecked)
+    {
+      this.filterClass = 'noDisplay';
+    }
+    else
+    {
+      this.filterClass='filterPart';
+      //this.tableClass='noDisplay';
+    }
+  }
+
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(DialogOverviewExampleDialogComponent, {
+      width: '1000px',
+      data: {name: this.name, animal: this.animal},
+      
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.animal = result;
+    });
+  }
+
+
+  
+ 
 
 
 }

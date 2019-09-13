@@ -40,6 +40,7 @@
     height: 92.6vh;
     width: 100%;
     margin: 0;
+    padding: 0;
 }
 
 .sideBar
@@ -53,11 +54,28 @@
     padding: 0;
 }
 
+.navModule
+{
+    
+    margin: 0;
+    width: 100%;
+    padding: 5px;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    
+}
+
+.moduleName
+{
+    flex: 1;
+    display: flex;
+}
 
 
 .mainBar
 {
     height: -webkit-fill-available;
+    padding: 0;
    
 }
 
@@ -84,6 +102,103 @@
     
 }
 
+/*Module heading*/
+.moduleHeading
+{
+    font-family: 'Varela Round';
+    font-size:18px;
+    font-weight: 600;
+}
+
+/*module Count*/
+.moduleCount
+{
+   
+    background-color: antiquewhite;
+    font-family: 'Varela Round';
+    font-size: 12px;
+    width: 130px;
+    padding: 4px;
+    margin-left: 18px;
+    text-align: center;
+    color: cadetblue;
+}
+
+
+/*Fixing the padding for the main row */
+.mainRow
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/*Action button for module navbar*/
+.actionBtn
+{
+    height: 30px;
+}
+.actionBtn button
+{
+    height: 30px;
+    color: #244093;
+    border: 1px solid #244093;
+    font-family: 'Varela Round';
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 80px;
+    line-height: 0;
+}
+/*Inner menu for the actions button*/
+.innerMenu
+{
+    font-size: 12px;
+    font-family: 'Varela Round';
+    
+    margin: 0;
+    line-height: 0;
+    height: 24px;
+    
+}
+/*Removing the orange outline which occurs everytime you click on a button*/
+button:focus {
+    outline: 0;
+    outline-style:none;
+    outline-width:0;
+} 
+
+.toggleBtn
+{
+    margin-top: 13px;
+}
+
+
+/*The data part CSS*/
+/*the main Container*/
+.dataPart
+{
+    display: flex;
+}
+
+.filterPart
+{
+    flex: 1;
+}
+.tablePart
+{
+    flex:4;
+}
+
+
+/*Changing the filter toggle color*/
+/deep/ .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+    background-color: #49c5b6;
+}
+
+/deep/ .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+    background-color: #49c5b6;
+}
+
 
 
 @media only screen and (max-width: 720px) {
@@ -95,6 +210,7 @@
 .mainContainer
 {
     width: 100%;
+    padding: 0;
 }
   
 }
@@ -104,6 +220,11 @@
     {
        height: 90.6vh;
       max-width: 100%;
+    }
+
+    .dataPart
+    {
+        flex-direction: column;
     }
   }
 
@@ -117,7 +238,10 @@
   
   
   
-
+  mat-card
+  {
+    font-family: 'Varela Round';
+  }
 
 
 
