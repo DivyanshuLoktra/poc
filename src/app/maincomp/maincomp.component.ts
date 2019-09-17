@@ -28,6 +28,8 @@ export class MaincompComponent implements OnInit {
   tableClass='tablePart';
   isChecked:boolean=false;
 
+  //rotating factor of topIcon
+  topIconMenu="button-collapse collapseBtn";
   
 
   ngOnInit() {

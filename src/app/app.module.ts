@@ -24,6 +24,7 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSelectModule} from '@angular/material/select';
 import {DialogOverviewExampleDialogComponent} from './maincomp/dialog-overview-example-dialog/dialog-overview-example-dialog.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 const appRoutes: Routes = [
   {
@@ -37,7 +38,7 @@ const appRoutes: Routes = [
   
   {
     path:'main',
-    //canActivate:[AuthService],
+    canActivate:[AuthService],
     component:MaincompComponent
   }
 ]
@@ -61,7 +62,7 @@ const appRoutes: Routes = [
     MatCardModule,
     BrowserAnimationsModule,
     MatButtonModule, MatCheckboxModule,MatMenuModule,MatSlideToggleModule,MatInputModule,MatDatepickerModule,MatNativeDateModule,
-    MatAutocompleteModule,MatSortModule,MatDialogModule,MatSelectModule
+    MatAutocompleteModule,MatSortModule,MatDialogModule,MatSelectModule,MatSnackBarModule
   ],
   entryComponents: [DialogOverviewExampleDialogComponent],
   providers: [MatNativeDateModule],
